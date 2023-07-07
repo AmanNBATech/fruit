@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+<form action="" method="post">
+        {% csrf_token %}
+        <input type="number" name="num1" placeholder="Number 1" required><br><br>
+        <input type="number" name="num2" placeholder="Number 2" required><br><br>
+        <select name="options">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+
+    <h2>Result: {{ result }}</h2>
+  
+</body>
