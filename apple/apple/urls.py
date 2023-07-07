@@ -22,6 +22,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('index/', views.index, name='index'),
     path('hip/', views.hip, name='hip'),
-     path('addi/', views.addi, name='addi'),
+     path('addi/', views.addi, name='addi'),       
+     path('percent/', views.percent, name='percent'),
+
+
 
 ]

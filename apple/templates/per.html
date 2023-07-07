@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="number" name="numa" placeholder="Number 1" required><br><br>
+        <input type="number" name="numb" placeholder="Number 2" required><br><br>
+        <input type="number" name="numc" placeholder="Number 3" required><br><br>
+        <input type="number" name="numd" placeholder="Number 4" required><br><br>
+        <input type="number" name="nume" placeholder="Number 5" required><br><br>
+    </select><br><br>
+    <input type="submit" value="result">
+    </form>
+    {% if sum %}
+    <h1>pass:{{sum}}----{{ave}}</h1>
+{% else %}
+    <h1>{{msg}}</h1>
+
+{% endif %}
+</body>
+</html>

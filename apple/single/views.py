@@ -39,3 +39,24 @@ def addi(request):
     
     return render(request, 'addi.html')
 
+
+def percent(request):
+ if request.method=="POST":
+     numa = int(request.POST['numa'])
+     numb = int(request.POST['numb'])
+     numc = int(request.POST['numc'])
+     numd = int(request.POST['numd'])
+     nume = int(request.POST['nume'])
+     if (numa>33 and numb>33 and numc>33 and numd>33 and nume>33):
+         sum=(numa+numb+numc+numd+nume)
+         ave=(sum/500)*100
+         return render(request,'per.html',{'sum':sum,'ave':ave })
+         
+     else:
+         msg = "You are fail"
+         
+         return render(request, 'per.html',{'msg':msg})
+ else:
+        
+        return render(request, 'per.html')
+
